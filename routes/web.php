@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\AdminBrandController;
 use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProductController;
@@ -58,6 +59,7 @@ Route::middleware(['auth','auth.admin'])->group(function(){
     Route::get('/admin/dashboard',[AdminController::class,'index'])->name(('admin.index'));
     Route::get('/admin/category',[AdminCategoryController::class,'index'])->name('admin.category');
     Route::get('/admin/product',[ProductController::class,'index'])->name('admin.product');
+    Route::get('/admin/brand',[AdminBrandController::class,'index'])->name('admin.brand');
 //category
     Route::get('/admin/category/create', [CategoryController::class, 'create'])->name('category.create');
     Route::post('/category/store', [CategoryController::class, 'store'])->name('category.store');
@@ -67,4 +69,5 @@ Route::middleware(['auth','auth.admin'])->group(function(){
 //product
     Route::get('/admin/product/create',[ProductController::class,'create'])->name(('product.create'));
     Route::post('/admin/product/add', [ProductController::class, 'addProduct'])->name('addProduct');
+//Brand
 });

@@ -78,67 +78,6 @@
                             </div>
                         </div>
 
-                        <div class="accordion-item category-color">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree">
-                                    Color
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse show"
-                                aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <ul class="category-list">
-                                        <li>
-                                            <a href="javascript:void(0)">
-                                                <i class="fas fa-check"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)">
-                                                <i class="fas fa-check"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)">
-                                                <i class="fas fa-check"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)">
-                                                <i class="fas fa-check"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)">
-                                                <i class="fas fa-check"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)">
-                                                <i class="fas fa-check"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)">
-                                                <i class="fas fa-check"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)">
-                                                <i class="fas fa-check"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)">
-                                                <i class="fas fa-check"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
                         <div class="accordion-item category-price">
                             <h2 class="accordion-header" id="headingFour">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
@@ -151,38 +90,6 @@
                                         <input type="text" class="js-range-slider" id="js-range-price" value="">
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item category-price">
-                            <h2 class="accordion-header" id="headingFive">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFive">
-                                    Size
-                                </button>
-                            </h2>
-
-                            <div id="collapseFive" class="accordion-collapse collapse show"
-                                aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <ul class="category-list">
-                                        <li>
-                                            <a href="javascript:void(0)">S</a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)">M</a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)">L</a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)">XL</a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)">XXL</a>
-                                        </li>
-                                    </ul>
-                                </div> 
                             </div>
                         </div>
 
@@ -206,43 +113,6 @@
                                                 </div>
                                             </li>
                                         @endforeach
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingSeven">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseSeven">
-                                    Diskon
-                                </button>
-                            </h2>
-                            <div id="collapseSeven" class="accordion-collapse collapse show"
-                                aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <ul class="category-list">
-                                        <li>
-                                            <div class="form-check ps-0 custome-form-check">
-                                                <input class="checkbox_animated check-it" type="checkbox"
-                                                    id="flexCheckDefault19">
-                                                <label class="form-check-label" for="flexCheckDefault19">Diskon 5%</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="form-check ps-0 custome-form-check">
-                                                <input class="checkbox_animated check-it" type="checkbox"
-                                                    id="flexCheckDefault20">
-                                                <label class="form-check-label" for="flexCheckDefault20">Diskon 10%</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="form-check ps-0 custome-form-check">
-                                                <input class="checkbox_animated check-it" type="checkbox"
-                                                    id="flexCheckDefault21">
-                                                <label class="form-check-label" for="flexCheckDefault21">Diskon 20%</label>
-                                            </div>
-                                        </li>
                                     </ul>
                                 </div>
                             </div>

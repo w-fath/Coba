@@ -13,6 +13,9 @@
                 <a class="nav-link text-center text-light px-3" href="{{route('admin.product')}}">Product</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link text-center text-light px-3" href="{{route('admin.brand')}}">Brand</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link text-center text-light px-3" href="#">Order</a>
             </li>
             <li class="nav-item">

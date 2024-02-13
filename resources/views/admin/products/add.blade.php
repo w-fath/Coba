@@ -13,6 +13,9 @@
                 <a class="nav-link text-center text-light px-3" href="{{route('admin.product')}}">Product</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link text-center text-light px-3" href="{{route('admin.brand')}}">Brand</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link text-center text-light px-3" href="#">Order</a>
             </li>
             <li class="nav-item">
@@ -143,13 +146,26 @@
                                         @error('image')
                                             <p class="text-danger">{{ $message }}</p>
                                         @enderror
-                                    </div>                              
+                                    </div>                         
                                     <div class="mb-3 mt-3">
                                         <label for="category_id" class="form-label">Category</label>
                                         <select class="form-control" name="category_id">
                                             <option value="0" selected>Select Category</option>
                                             @foreach ($categories as $category)
                                                 <option value="{{$category->id}}">{{$category->name}}</option>
+                                            @endforeach
+
+                                        </select>
+                                        @error('category_id')
+                                            <p class="text-danger">{{$message}}</p>
+                                        @enderror
+                                    </div>
+                                    <div class="mb-3 mt-3">
+                                        <label for="brand_id" class="form-label">Brand</label>
+                                        <select class="form-control" name="brand_id">
+                                            <option value="0" selected>Select Brand</option>
+                                            @foreach ($brands as $brand)
+                                                <option value="{{$brand->id}}">{{$brand->name}}</option>
                                             @endforeach
 
                                         </select>

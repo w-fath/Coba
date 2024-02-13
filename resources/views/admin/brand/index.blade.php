@@ -39,6 +39,18 @@
             margin-right: 15px;
         }
     </style>
+<div>
+    <style>
+        nav svg{
+            height: 20px;
+        }
+        nav .hidden{
+            display: block;
+        }
+        .jarak {
+            margin-right: 15px;
+        }
+    </style>
     <main class="main">
         <section class="mt-50 mb-50">
             <div class="container">
@@ -48,10 +60,10 @@
                             <div class="card-header">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        All Category
+                                        All Brands
                                     </div>
                                     <div class="col-md-6">
-                                        <a href="{{route('category.create')}}" class="btn btn-solid-default btn fw-bold mb-0 ms-0 float-end">+ Tambah Kategori</a>
+                                        <a href="" class="btn btn-solid-default btn fw-bold mb-0 ms-0 float-end">+ Tambah Kategori</a>
                                     </div>
                                 </div>
                             </div>
@@ -67,31 +79,31 @@
                                     </thead>
                                     <tbody>
                                         @php
-                                            $i = ($categories->currentPage()-1)*$categories->perPage();
-                                        @endphp
-                                        @foreach ($categories as $category)
+                                            $i = ($brands->currentPage() - 1) * $brands->perPage();
+                                        @endphp                                    
+                                        @foreach ($brands as $brand)
                                             <tr>
-                                                <td>{{ $category->id }}</td>
-                                                <td>{{ $category->name }}</td>
-                                                <td>{{ $category->slug }}</td>
+                                                <td>{{ $brand->id }}</td>
+                                                <td>{{ $brand->name }}</td>
+                                                <td>{{ $brand->slug }}</td>
                                                 <td>
-                                                    <a href="{{ route('category.destroy', $category->id) }}" class="btn btn-danger float-end" onclick="event.preventDefault(); confirmDelete('{{ $category->id }}')">
+                                                    <a href="" class="btn btn-danger float-end" onclick="event.preventDefault(); confirmDelete('{{ $brand->id }}')">
                                                         <i class="fa fa-edit"></i> Hapus
                                                     </a> 
-                                                    <a href="{{ route('category.edit', $category->id) }}" class="btn btn-warning jarak float-end">
+                                                    <a href="" class="btn btn-warning jarak float-end">
                                                         <i class="fa fa-edit"></i> Edit
                                                     </a>                                                   
                                                     
                                                     <script>
-                                                        function confirmDelete(categoryId) {
+                                                        function confirmDelete(brandId) {
                                                             var result = confirm("Apakah Anda yakin ingin menghapus kategori ini?");
                                                             if (result) {
-                                                                document.getElementById('delete-form-' + categoryId).submit();
+                                                                document.getElementById('delete-form-' + brandId).submit();
                                                             }
                                                         }
                                                     </script>
 
-                                                    <form id="delete-form-{{ $category->id }}" action="{{ route('category.destroy', $category->id) }}" method="POST" style="display: none;">
+                                                    <form id="delete-form-{{ $brand->id }}" action="" method="POST" style="display: none;">
                                                         @csrf
                                                         @method('DELETE')
                                                     </form>
@@ -100,7 +112,7 @@
                                         @endforeach
                                     </tbody>
                                 </table>
-                                {{$categories->links()}}
+                                {{$brands->links()}}
                             </div>
                         </div>
                     </div>
@@ -108,5 +120,6 @@
             </div>
         </section>
     </main>
+</div>
 </div>
 @endsection
