@@ -124,7 +124,7 @@
 </section>
 <!-- banner section end -->
 
-<section class="ratio_asos overflow-hidden">
+<!--<section class="ratio_asos overflow-hidden">
     <div class="container p-sm-0">
         <div class="row m-0">
             <div class="col-12 p-0">
@@ -166,10 +166,10 @@
                 }
             }
         </style>
-</section>
+</section>-->
 
 <!-- category section start -->
-<section class="category-section ratio_40">
+<!--<section class="category-section ratio_40">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
@@ -245,11 +245,11 @@
             </div>
         </div>
     </div>
-</section>
+</section>-->
 <!-- category section end -->
 
 
-<section class="product-slider overflow-hidden">
+<!--<section class="product-slider overflow-hidden">
     <div>
         <div class="container">
             <div class="row g-3">
@@ -827,15 +827,15 @@
     .products-c .bg-size {
         background-position: center 0 !important;
     }
-</style>
+</style>-->
 
 <section class="ratio_asos overflow-hidden pb-5">
     <div class="px-0 container-fluid p-sm-0">
         <div class="row m-0">
             <div class="col-12 p-0">
                 <div class="title-3 text-center">
-                    <h2>Fashion Top Deals</h2>
-                    <h5 class="theme-color">Our Collection</h5>
+                    <h2>Fashion Trend <?php echo date("Y"); ?></h2>
+                    <h5 class="theme-color">Koleksi Terbaru</h5>
                 </div>
             </div>
 

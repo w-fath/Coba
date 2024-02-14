@@ -304,16 +304,16 @@
                                         <a href="index.htm" class="font-dark">Home</a>
                                     </li>
                                     <li>
-                                        <a href="shop.html" class="font-dark">Shop</a>
+                                        <a href="{{route('shop.index')}}" class="font-dark">Shop</a>
                                     </li>
                                     <li>
-                                        <a href="about-us.html" class="font-dark">About Us</a>
+                                        <a href="{{route('about.index')}}" class="font-dark">About Us</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="font-dark">Blog</a>
+                                        <a href="{{route('blog.index')}}" class="font-dark">Blog</a>
                                     </li>
                                     <li>
-                                        <a href="contact-us.html" class="font-dark">Contact</a>
+                                        <a href="{{route('contact.index')}}" class="font-dark">Contact Us</a>
                                     </li>
                                 </ul>
                             </div>

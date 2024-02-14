@@ -124,7 +124,7 @@
 
                                     <div class="color-image">
                                         <div class="image-select">
-                                            <h5>Color :</h5>
+                                            <h5>Warna :</h5>
                                             <ul class="image-section">
                                                 <li>
                                                     <a href="javascript:void(0)">
@@ -149,12 +149,12 @@
                                     </div>
 
                                     <div id="selectSize" class="addeffect-section product-description border-product">
-                                        <h6 class="product-title size-text">select size
+                                        <h6 class="product-title size-text">ukuran
                                             <a href="javascript:void(0)" data-bs-toggle="modal"
                                                 data-bs-target="#sizemodal">size chart</a>
                                         </h6>
 
-                                        <h6 class="error-message">please select size</h6>
+                                        <h6 class="error-message">Pilih ukuran</h6>
 
                                         <div class="size-box">
                                             <ul>
@@ -173,7 +173,7 @@
                                             </ul>
                                         </div>
 
-                                        <h6 class="product-title product-title-2 d-block">quantity</h6>
+                                        <h6 class="product-title product-title-2 d-block">Jumlah</h6>
 
                                         <div class="qty-box">
                                             <div class="input-group">
@@ -198,12 +198,12 @@
                                     <div class="product-buttons">
                                         <a href="javascript:void(0)" class="btn btn-solid">
                                             <i class="fa fa-bookmark fz-16 me-2"></i>
-                                            <span>Wishlist</span>
+                                            <span>Favorit</span>
                                         </a>
                                         <a href="javascript:void(0)" onclick="event.preventDefault();document.getElementById('addtocart').submit();"                                           
                                             id="cartEffect" class="btn btn-solid hover-solid btn-animation">
                                             <i class="fa fa-shopping-cart"></i>
-                                            <span>Add To Cart</span>
+                                            <span>Masukan Keranjang</span>
                                             <form id="addtocart" method="post" action="{{route('cart.store')}}">
                                                 @csrf
                                                 <input type="hidden" name="id" value="{{$product->id}}">
@@ -223,35 +223,18 @@
                                     <div class="mt-2 mt-md-3 border-product">
                                         <h6 class="product-title hurry-title d-block">
                                             @if ($product->stock_status=='instock')
-                                                InStock
+                                                Stok Tersedia
                                             @else
-                                                Out Of Stock
+                                                Stok Habis
                                             @endif
                                         </h6>
                                         <div class="progress">
                                             <div class="progress-bar" role="progressbar" style="width: 78%"></div>
                                         </div>
-                                        <div class="font-light timer-5">
-                                            <h5>Order in the next to get</h5>
-                                            <ul class="timer1">
-                                                <li class="counter">
-                                                    <h5 id="days">&#9251;</h5> Days :
-                                                </li>
-                                                <li class="counter">
-                                                    <h5 id="hours">&#9251;</h5> Hour :
-                                                </li>
-                                                <li class="counter">
-                                                    <h5 id="minutes">&#9251;</h5> Min :
-                                                </li>
-                                                <li class="counter">
-                                                    <h5 id="seconds">&#9251;</h5> Sec
-                                                </li>
-                                            </ul>
-                                        </div>
                                     </div>
 
                                     <div class="border-product">
-                                        <h6 class="product-title d-block">share it</h6>
+                                        <h6 class="product-title d-block">Bagikan</h6>
                                         <div class="product-icon">
                                             <ul class="product-social">
                                                 <li>
@@ -293,13 +276,13 @@
                         <nav>
                             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                 <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
-                                    data-bs-target="#desc" type="button">Description</button>
+                                    data-bs-target="#desc" type="button">Deskripsi</button>
 
                                 <button class="nav-link" id="nav-speci-tab" data-bs-toggle="tab" data-bs-target="#speci"
-                                    type="button">Specifications</button>
+                                    type="button">Spesifikasi</button>
 
                                 <button class="nav-link" id="nav-size-tab" data-bs-toggle="tab"
-                                    data-bs-target="#nav-guide" type="button">Sizing Guide</button>
+                                    data-bs-target="#nav-guide" type="button">Panduan Ukuran</button>
 
                                 <button class="nav-link" id="nav-question-tab" data-bs-toggle="tab"
                                     data-bs-target="#question" type="button">Q & A</button>
