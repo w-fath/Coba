@@ -7,6 +7,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AppController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ContactController;
@@ -14,6 +15,7 @@ use App\Http\Controllers\SearchController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WishlistController;
+use App\Models\Brand;
 use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 
@@ -56,7 +58,7 @@ Route::middleware('auth')->group(function(){
 });
 
 Route::middleware(['auth','auth.admin'])->group(function(){
-    Route::get('/admin/dashboard',[AdminController::class,'index'])->name(('admin.index'));
+    Route::get('/admin/dashboard',[AdminController::class,'index'])->name('admin.index');
     Route::get('/admin/category',[AdminCategoryController::class,'index'])->name('admin.category');
     Route::get('/admin/product',[ProductController::class,'index'])->name('admin.product');
     Route::get('/admin/brand',[AdminBrandController::class,'index'])->name('admin.brand');
@@ -67,7 +69,12 @@ Route::middleware(['auth','auth.admin'])->group(function(){
     Route::put('/category/{id}', [CategoryController::class,'update'])->name('category.update');
     Route::delete('/category/{id}', [CategoryController::class,'destroy'])->name('category.destroy');
 //product
-    Route::get('/admin/product/create',[ProductController::class,'create'])->name(('product.create'));
+    Route::get('/admin/product/create',[ProductController::class,'create'])->name('product.create');
     Route::post('/admin/product/add', [ProductController::class, 'addProduct'])->name('addProduct');
 //Brand
+    Route::get('admin/brand/create', [BrandController::class,'create'])->name('brand.create');
+    Route::post('/brand/store',[BrandController::class,'store'])->name('brand.store');
+    Route::get('/brand/{id}/edit', [BrandController::class,'edit'])->name('brand.edit');
+    Route::put('/brand/{id}', [BrandController::class,'update'])->name('brand.update');
+    Route::delete('/brand/{id}', [BrandController::class,'destroy'])->name('brand.destroy');
 });

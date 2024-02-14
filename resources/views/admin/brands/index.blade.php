@@ -63,7 +63,7 @@
                                         All Brands
                                     </div>
                                     <div class="col-md-6">
-                                        <a href="" class="btn btn-solid-default btn fw-bold mb-0 ms-0 float-end">+ Tambah Kategori</a>
+                                        <a href="{{route('brand.create')}}" class="btn btn-solid-default btn fw-bold mb-0 ms-0 float-end">+ Tambah Brand</a>
                                     </div>
                                 </div>
                             </div>
@@ -87,10 +87,10 @@
                                                 <td>{{ $brand->name }}</td>
                                                 <td>{{ $brand->slug }}</td>
                                                 <td>
-                                                    <a href="" class="btn btn-danger float-end" onclick="event.preventDefault(); confirmDelete('{{ $brand->id }}')">
+                                                    <a href="{{ route('brand.destroy', $brand->id) }}" class="btn btn-danger float-end" onclick="event.preventDefault(); confirmDelete('{{ $brand->id }}')">
                                                         <i class="fa fa-edit"></i> Hapus
                                                     </a> 
-                                                    <a href="" class="btn btn-warning jarak float-end">
+                                                    <a href="{{ route('brand.edit', $brand->id) }}" class="btn btn-warning jarak float-end">
                                                         <i class="fa fa-edit"></i> Edit
                                                     </a>                                                   
                                                     
@@ -103,7 +103,7 @@
                                                         }
                                                     </script>
 
-                                                    <form id="delete-form-{{ $brand->id }}" action="" method="POST" style="display: none;">
+                                                    <form id="delete-form-{{ $brand->id }}" action="{{ route('brand.destroy', $brand->id) }}" method="POST" style="display: none;">
                                                         @csrf
                                                         @method('DELETE')
                                                     </form>
