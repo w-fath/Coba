@@ -49,6 +49,7 @@ Route::post('/wishlist/move-to-cart',[WishlistController::class,'moveToCart'])->
 
 Route::get('/about', [AboutController::class,'index'])->name('about.index');
 Route::get('/contact', [ContactController::class,'index'])->name('contact.index');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 Route::get('/blog', [BlogController::class,'index'])->name('blog.index');
 Route::get('/search', [SearchController::class,'search'])->name('search.shop');
 Auth::routes();

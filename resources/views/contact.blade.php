@@ -42,44 +42,53 @@
                             <p class="ms-0 w-100">Data anda aman pada kami, dan tidak akan di Publikasikan kepada siapapun *</p>
                         </div>
                     </div>
-                    <div class="row g-4 mt-md-1 mt-2">
-                        <div class="col-md-6">
-                            <label for="first" class="form-label">Nama Depan</label>
-                            <input type="text" class="form-control" id="first" placeholder="Masukan Nama Depan Anda"
-                                required="">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="last" class="form-label">Nama Belakang</label>
-                            <input type="text" class="form-control" id="last" placeholder="Masukan Nama Belakang Anda"
-                                required="">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email"
-                                placeholder="Masukan Gmail Anda" required="">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="whatsapp" class="form-label">WhatsApp</label>
-                            <input type="text" class="form-control" id="whatsapp"
-                                placeholder="Masukan No. WhatsApp anda" required="">
-                        </div>
+                    
+                    <form action="{{ route('contact.store') }}" method="POST">
+                        @csrf
+                        <div class="row g-4 mt-md-1 mt-2">
+                            @if ($message = Session::get('success'))
+                                <div class="alert alert-success" role="alert">
+                                    {{$message}}
+                                </div>    
+                            @endif
+                            <div class="col-md-6">
+                                <label for="first_name" class="form-label">Nama Depan</label>
+                                <input type="text" class="form-control" name="first_name" id="first_name" placeholder="Masukan Nama Depan Anda"
+                                    required="">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="last_name" class="form-label">Nama Belakang</label>
+                                <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Masukan Nama Belakang Anda"
+                                    required="">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" name="email" id="email"
+                                    placeholder="Masukan Gmail Anda" required="">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="whatsapp" class="form-label">WhatsApp</label>
+                                <input type="number" class="form-control" name="whatsapp" id="whatsapp"
+                                    placeholder="Masukan No. WhatsApp anda" required="">
+                            </div>
 
-                        <div class="col-12">
-                            <label for="comment" class="form-label">Pesan/Komentar</label>
-                            <textarea class="form-control" id="comment" rows="5" placeholder="Masukan Pesan/Komentar Anda" required=""></textarea>
-                        </div>
+                            <div class="col-12">
+                                <label for="comment" class="form-label">Pesan/Komentar</label>
+                                <textarea class="form-control" name="comment" id="comment" rows="5" placeholder="Masukan Pesan/Komentar Anda" required=""></textarea>
+                            </div>
 
-                        <div class="col-auto">
-                            <button class="btn btn-solid-default" type="submit">Kirim</button>
+                            <div class="col-auto">
+                                <button class="btn btn-solid-default" type="submit">Kirim</button>
+                            </div>        
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
 
             <div class="col-lg-5">
                 <div class="contact-details">
                     <div>
-                        <h2>Hubungi dengan yang lainnya</h2>
+                        <h2>Alamat lainnya</h2>
                         <h5 class="font-light">Kami bersedia menerima saran atau hanya sekedar mengobrol</h5>
                         <div class="contact-box">
                             <div class="contact-icon">

@@ -392,38 +392,7 @@
             <div class="container">
                 <div class="row gy-3">
                     <div class="col-md-6">
-                        <ul>
-                            <li class="font-dark">Pembayaran:</li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <img src="assets/images/payment-icon/bank.png" class="img-fluid blur-up lazyload"
-                                        alt="payment icon">
-                                </a>
-                            </li><li>
-                                <a href="javascript:void(0)">
-                                    <img src="assets/images/payment-icon/wallet.png" class="img-fluid blur-up lazyload"
-                                        alt="payment icon">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <img src="assets/images/payment-icon/master.jpg" class="img-fluid blur-up lazyload"
-                                        alt="payment icon">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <img src="assets/images/payment-icon/visa.jpg" class="img-fluid blur-up lazyload"
-                                        alt="payment icon">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <img src="assets/images/payment-icon/paypal.jpg" class="img-fluid blur-up lazyload"
-                                        alt="payment icon">
-                                </a>
-                            </li>
-                        </ul>
+
                     </div>
                     <div class="col-md-6">
                         <p class="mb-0 font-dark">© 2023, W-Fath Developer.</p>
